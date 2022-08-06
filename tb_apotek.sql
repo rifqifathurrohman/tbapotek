@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 02, 2022 at 11:47 AM
+-- Generation Time: Aug 06, 2022 at 07:29 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -44,7 +44,7 @@ INSERT INTO `golongan` (`golongan_obat`, `kegunaan`, `id_golongan`, `rakpenyimpa
 ('Antispasmodik', 'Relaksan atau kejang Otot', 103, 'Obat_017'),
 ('Gastrointestinal', 'Saluran Pencernaan', 104, 'Obat_013'),
 ('Antiemetika', 'Mual Muntah', 105, 'Obat_016'),
-('Antiasma', 'Antiasma', 465, 'Obat_030');
+('Antiasma', 'Antiasma', 106, 'Obat_030');
 
 -- --------------------------------------------------------
 
@@ -126,30 +126,30 @@ CREATE TABLE `limits` (
 --
 
 INSERT INTO `limits` (`id`, `uri`, `count`, `hour_started`, `api_key`) VALUES
-(1, 'uri:api/obat/apotek:get', 19, 1659430432, 'algies'),
+(1, 'uri:api/obat/apotek:get', 37, 1659760715, 'algies'),
 (2, 'uri:api/obat/apotek:post', 5, 1659415436, 'algies'),
-(3, 'uri:api/golongan/apotek:get', 2, 1659431465, 'algies'),
+(3, 'uri:api/golongan/apotek:get', 5, 1659761414, 'algies'),
 (4, 'uri:api/golongan/apotek:post', 1, 1659370839, 'algies'),
-(5, 'uri:api/karyawan/apotek:get', 2, 1659371246, 'algies'),
+(5, 'uri:api/karyawan/apotek:get', 61, 1659760718, 'algies'),
 (6, 'uri:api/pelanggan/apotek:get', 2, 1658117627, 'algies'),
-(7, 'uri:api/supplier/apotek:get', 1, 1659372279, 'algies'),
+(7, 'uri:api/supplier/apotek:get', 13, 1659761662, 'algies'),
 (8, 'uri:api/fakturpenjualan/apotek:get', 1, 1658119695, 'algies'),
 (9, 'uri:api/faktursupplier/apotek:get', 3, 1658199518, 'algies'),
 (10, 'uri:api/supplier/apotek:get', 1, 1659372268, 'rifki'),
-(11, 'uri:api/pelanggan/apotek:get', 25, 1659137663, 'rifki'),
+(11, 'uri:api/pelanggan/apotek:get', 8, 1659761421, 'rifki'),
 (12, 'uri:api/fakturpenjualan/apotek:get', 3, 1658285727, 'rifki'),
 (13, 'uri:api/karyawan/apotek:post', 2, 1659371849, 'rifki'),
 (14, 'uri:api/supplier/apotek:post', 1, 1659372597, 'rifki'),
-(15, 'uri:api/pelanggan/apotek:post', 8, 1658123636, 'rifki'),
+(15, 'uri:api/pelanggan/apotek:post', 2, 1659545974, 'rifki'),
 (16, 'uri:api/fakturpenjualan/apotek:post', 3, 1658199444, 'algies'),
-(17, 'uri:api/transaksisupplier/apotek:get', 1, 1659266410, 'algies'),
-(18, 'uri:api/transaksipenjualan/apotek:get', 1, 1658666067, 'rifki'),
-(19, 'uri:api/transaksipenjualan/apotek:post', 5, 1659137534, 'algies'),
-(20, 'uri:api/transaksisupplier/apotek:post', 1, 1659137803, 'algies'),
-(21, 'uri:api/transaksipenjualan/apotek:get', 1, 1659266410, 'algies'),
-(22, 'uri:api/obat/apotek:post', 1, 1659414792, 'rifki'),
-(23, 'uri:api/golongan/apotek:post', 1, 1659044916, 'rifki'),
-(24, 'uri:api/karyawan/apotek:post', 2, 1659138707, 'algies'),
+(17, 'uri:api/transaksisupplier/apotek:get', 14, 1659760575, 'algies'),
+(18, 'uri:api/transaksipenjualan/apotek:get', 2, 1659546355, 'rifki'),
+(19, 'uri:api/transaksipenjualan/apotek:post', 1, 1659718046, 'algies'),
+(20, 'uri:api/transaksisupplier/apotek:post', 2, 1659755423, 'algies'),
+(21, 'uri:api/transaksipenjualan/apotek:get', 18, 1659761419, 'algies'),
+(22, 'uri:api/obat/apotek:post', 1, 1659756582, 'rifki'),
+(23, 'uri:api/golongan/apotek:post', 1, 1659716281, 'rifki'),
+(24, 'uri:api/karyawan/apotek:post', 2, 1659760709, 'algies'),
 (25, 'uri:api/pelanggan/apotek:post', 2, 1658807064, 'algies'),
 (26, 'uri:api/supplier/apotek:post', 2, 1659139187, 'algies'),
 (27, 'uri:api/key/key:post', 3, 1659431166, 'algies');
@@ -173,14 +173,11 @@ CREATE TABLE `obat` (
 --
 
 INSERT INTO `obat` (`id_obat`, `id_golongan`, `nama_obat`, `stok`, `harga`) VALUES
-(57, 103, 'FGV', 240, 6000),
-(301, 104, 'Promag', 140, 2500),
-(302, 102, 'Cetirizine', 240, 3000),
+(301, 104, 'Promag', 218, 2500),
+(302, 102, 'Cetirizine', 214, 3000),
 (303, 103, 'Levsin', 240, 3000),
-(304, 104, 'Dobrizol', 240, 3500),
-(305, 105, 'Domperidon', 240, 4000),
-(364, 103, 'SV', 345, 300),
-(3463, 101, 'er', 45, 345);
+(304, 104, 'Dobrizol', 225, 3500),
+(305, 105, 'Domperidon', 230, 2500);
 
 -- --------------------------------------------------------
 
@@ -206,7 +203,7 @@ INSERT INTO `pelanggan` (`id_pelanggan`, `nama_pelanggan`, `jenis_kelamin`, `umu
 (402, 'Dhanti', 'perempuan', 21, 'Bandung', 85744688),
 (403, 'Hasna', 'perempuan', 20, 'Bandung', 857770765),
 (404, 'Rifki', 'laki-laki', 21, 'Cimahi', 827864388),
-(405, 'Algies R', 'perempuan', 20, 'Cimindi', 827686688);
+(405, 'Lala', 'perempuan', 20, 'Ciawi ', 826768777);
 
 -- --------------------------------------------------------
 
@@ -255,13 +252,13 @@ CREATE TABLE `transaksi_penjualan` (
 --
 
 INSERT INTO `transaksi_penjualan` (`id_t_penjualan`, `id_karyawan`, `id_pelanggan`, `id_obat`, `tanggal`, `jumlah`, `total_bayar`) VALUES
-(601, 202, 405, 301, '2022-07-14', 240, 18000),
-(602, 201, 402, 301, '2022-07-03', 240, 30000),
-(603, 205, 403, 304, '2022-07-01', 240, 21000),
-(604, 203, 404, 305, '2022-07-18', 240, 20000),
-(605, 201, 401, 302, '2022-07-16', 240, 30000),
-(606, 202, 402, 302, '2022-07-18', 240, 22000),
-(609, 201, 402, 302, '2022-07-18', 240, 20000);
+(601, 202, 405, 301, '2022-07-14', 12, 30000),
+(602, 201, 402, 301, '2022-07-03', 10, 25000),
+(603, 205, 403, 304, '2022-07-01', 15, 52500),
+(604, 203, 404, 305, '2022-07-18', 10, 25000),
+(605, 201, 401, 302, '2022-07-16', 10, 30000),
+(606, 202, 402, 302, '2022-07-18', 8, 24000),
+(609, 201, 402, 302, '2022-07-18', 8, 24000);
 
 -- --------------------------------------------------------
 
@@ -284,12 +281,11 @@ CREATE TABLE `transaksi_supplier` (
 --
 
 INSERT INTO `transaksi_supplier` (`id_t_supplier`, `id_obat`, `id_supplier`, `id_karyawan`, `tanggal`, `jumlah`, `total_bayar`) VALUES
-(701, 301, 501, 201, '2022-06-30', 240, 300000),
+(701, 305, 501, 201, '2022-08-06', 240, 300000),
 (702, 302, 502, 202, '2022-06-30', 240, 360000),
 (703, 303, 503, 203, '2022-06-29', 240, 360000),
 (704, 304, 504, 204, '2022-06-28', 240, 400000),
-(705, 302, 503, 204, '2022-06-28', 240, 330000),
-(709, 301, 501, 201, '2022-07-29', 241, 2542351);
+(705, 301, 503, 204, '2022-08-01', 240, 330000);
 
 --
 -- Indexes for dumped tables
@@ -382,7 +378,7 @@ ALTER TABLE `transaksi_penjualan`
 -- AUTO_INCREMENT for table `transaksi_supplier`
 --
 ALTER TABLE `transaksi_supplier`
-  MODIFY `id_t_supplier` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=710;
+  MODIFY `id_t_supplier` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=778;
 
 --
 -- Constraints for dumped tables
